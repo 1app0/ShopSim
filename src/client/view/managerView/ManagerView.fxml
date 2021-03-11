@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.view.managerView.ManagerViewController">
+   <children>
+      <VBox prefHeight="382.0" prefWidth="500.0" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="525.0" text="what am I even doing here">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="380.0" prefWidth="500.0">
+               <children>
+                  <VBox prefHeight="362.0" prefWidth="120.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#addItem" text="Add Item">
+                           <VBox.margin>
+                              <Insets left="15.0" top="100.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#removeItem" text="Delete Item">
+                           <VBox.margin>
+                              <Insets left="15.0" top="15.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#logOut" text="Log Out">
+                           <VBox.margin>
+                              <Insets left="15.0" top="15.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <ScrollPane prefHeight="362.0" prefWidth="376.0">
+                     <content>
+                        <TableView fx:id="shopItemsTable" prefHeight="379.0" prefWidth="381.0">
+                           <columns>
+                              <TableColumn fx:id="idColumn" prefWidth="68.0" text="ID" />
+                              <TableColumn fx:id="nameColumn" prefWidth="130.0" text="NAME" />
+                              <TableColumn fx:id="barcodeColumn" minWidth="4.0" prefWidth="155.0" text="BARCODE" />
+                           </columns>
+                        </TableView>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Label fx:id="errorLabel" layoutX="2.0" layoutY="378.0" prefHeight="15.0" prefWidth="496.0" text="Label" />
+   </children>
+</AnchorPane>

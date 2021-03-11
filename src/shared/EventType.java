@@ -1,0 +1,17 @@
+package shared;
+
+import shared.dataTransfer.User;
+
+public enum EventType {
+  LOGIN_REQUEST,
+  LOGIN_RESULT,
+  REGISTER_RESULT,
+  REGISTER_REQUEST,
+  LIST_REQUEST,
+  LIST_RESULT,
+  CHECKOUT_REQUEST,
+  CHECKOUT_RESULT,
+  BROADCAST_REMOVE,
+  ADD_ITEM_REQUEST,
+  REMOVE_ITEM_REQUEST;
+}
